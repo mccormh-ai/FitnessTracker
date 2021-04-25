@@ -12,9 +12,13 @@ class GmailParse():
 
     def RequestConcat(self, service, msgs):
         concatList = []
-        for msg in msgs[:1]:
+        for msg in msgs:
             print(msg['id'])
             returnDf = GetAttachement(service=service, msg_id=msg['id'])
+            try:
+                returnDf['msgId'] = msg['id']
+            except:
+                print("No attachment")
             concatList.append(returnDf)
         return pd.concat(concatList, axis=0)
         

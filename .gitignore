@@ -139,3 +139,5 @@ cython_debug/
 
 *.json
 *.pyc
+
+flask_env/

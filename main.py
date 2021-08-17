@@ -21,13 +21,13 @@ class GmailParse():
                 print("No attachment")
             concatList.append(returnDf)
         return pd.concat(concatList, axis=0)
-        
+
     def runMsgs(self):
         _service = GetService()
         _msgs = GetMessages(service=_service, labelName=self.labelName)
         return self.RequestConcat(service=_service, msgs=_msgs)
-        
-   
+
+
 
 
 def main():

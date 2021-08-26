@@ -137,7 +137,7 @@ dmypy.json
 # Cython debug symbols
 cython_debug/
 
-*.json
+.json
 *.pyc
 
 flask_env/
